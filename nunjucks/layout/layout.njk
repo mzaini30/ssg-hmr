@@ -17,6 +17,7 @@
 	<link rel='stylesheet' href='/dist/remixicon/remixicon.css'>
 	<link rel="stylesheet" type="text/css" href="/dist/tailwind.css">
 	<link rel="stylesheet" type="text/css" href="/dist/progress.css">
+	<link rel="stylesheet" type="text/css" href="/dist/loading.css">
 	<link rel="stylesheet" type="text/css" href="/dist/global.css">
 	<script type="text/javascript" src="/dist/tools.js"></script>
 	<script type="text/javascript" src="/dist/turbolinks.js" defer=""></script>
@@ -32,6 +33,13 @@
 	</script>
 </head>
 <body>
-	{% block isi %}{% endblock %}
+	<div x-data="{isLoading: false}">
+		<template x-if="isLoading">
+			<div class="progress-loading">
+			  <div class="indeterminate"></div>
+			</div>
+		</template>
+		{% block isi %}{% endblock %}
+	</div>
 </body>
 </html>
