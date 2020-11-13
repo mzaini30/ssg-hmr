@@ -5,13 +5,13 @@ module.exports = function(grunt) {
     nunjucks: {
       options: {
         data:  grunt.file.readJSON('data.json'),
-        paths: 'src'
+        paths: 'nunjucks'
       },
       render: {
         files: [ {
-          cwd: "src",
+          cwd: "nunjucks",
           src: "**/*.njk",
-          dest: "dist",
+          dest: "html",
           expand: true,
           ext: ".html"
         } ]
@@ -20,7 +20,7 @@ module.exports = function(grunt) {
 
     watch: {
       nunjucks: {
-        files: ['src/**/*'],
+        files: ['nunjucks/**/*'],
         tasks: ['nunjucks'],
         options: {
           livereload: true,
