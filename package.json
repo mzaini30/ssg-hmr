@@ -5,12 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "grunt",
-    "build": "grunt nunjucks"
+    "dev": "cd html && live-server & grunt",
+    "build": "NODE_ENV=production npm run tailwind && grunt nunjucks",
+    "tailwind": "tailwindcss build tailwind.pcss -o _site/dist/tailwind.css"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://mzaini30:kuc1n9d0r43m0n@github.com/mzaini30/ssg-hmr.git"
+    "url": "git+https://github.com/mzaini30/ssg-hmr.git"
   },
   "keywords": [],
   "author": "",
@@ -23,6 +24,7 @@
     "grunt": "^1.3.0",
     "grunt-contrib-watch": "^1.1.0",
     "grunt-nunjucks-2-html": "^2.2.0",
+    "live-server": "^1.2.1",
     "nunjucks": "^3.2.2"
   }
 }
