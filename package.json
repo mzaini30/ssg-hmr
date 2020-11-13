@@ -1,0 +1,16 @@
+{
+  "name": "ssg-hmr",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@a8k/nunjucks-loader": "^2.5.3",
+    "webpack": "^5.4.0"
+  }
+}
